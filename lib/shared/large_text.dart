@@ -7,7 +7,7 @@ class LargeText extends StatelessWidget {
       required this.text,
       this.fontWeight = FontWeight.bold,
       this.color = Colors.black,
-      this.fontSize = 38})
+      this.fontSize = 32})
       : super(key: key);
 
   double fontSize;

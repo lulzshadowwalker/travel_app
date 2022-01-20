@@ -26,17 +26,15 @@ class NormalText extends StatefulWidget {
 class _NormalTextState extends State<NormalText> {
   @override
   Widget build(BuildContext context) {
-    return AnimatedDefaultTextStyle(
-        duration: const Duration(seconds: 3),
-        style: GoogleFonts.cairo(
-            letterSpacing: -1,
-            fontSize: widget.fontSize,
-            color: widget.color,
-            fontWeight: widget.fontWeight),
-        maxLines: widget.maxLines,
-        overflow: TextOverflow.fade,
-        child: Text(
-          widget.text,
-        ));
+    return Text(
+      widget.text,
+      style: GoogleFonts.cairo(
+          letterSpacing: -1,
+          fontSize: widget.fontSize,
+          color: widget.color,
+          fontWeight: widget.fontWeight),
+      maxLines: widget.maxLines,
+      overflow: TextOverflow.ellipsis,
+    );
   }
 }
