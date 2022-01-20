@@ -7,7 +7,7 @@ class LargeText extends StatelessWidget {
       required this.text,
       this.fontWeight = FontWeight.bold,
       this.color = Colors.black,
-      this.fontSize = 46})
+      this.fontSize = 38})
       : super(key: key);
 
   double fontSize;
@@ -19,7 +19,7 @@ class LargeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,
-        style: GoogleFonts.reenieBeanie(
+        style: GoogleFonts.cairo(
             fontSize: fontSize, color: color, fontWeight: fontWeight));
   }
 }
