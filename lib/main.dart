@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit/cubit/cubit.dart';
 import 'package:flutter_cubit/cubit/cubit_logic.dart';
 import 'package:flutter_cubit/pages/details_page.dart';
+import 'package:flutter_cubit/pages/nav_pages/main_page.dart';
 import 'package:flutter_cubit/pages/welcome_page.dart';
 
 void main() {
@@ -16,14 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: BlocProvider<AppCubit>(
-          create: (context) => AppCubit(),
-          child: const AppCubitLogic(),
-        ));
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: BlocProvider<AppCubit>(
+          create: (context) => AppCubit(), child: const AppCubitLogic()),
+    );
   }
 }
